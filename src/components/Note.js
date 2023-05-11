@@ -5,7 +5,8 @@ import Button from './Button';
 export default function Note(){
 
   const [vis, setVis] = useState(false)
- 
+  const date = new Date().toLocaleString()
+
   const handleClick = () => {
     setVis(!vis)
   }
@@ -18,6 +19,7 @@ export default function Note(){
         <Button type={'delete'} vis={vis} />
         <Button type={'edit'} vis={vis} />
       </div>
+      <span className='date'>{date}</span>
     </div>
   );
 }
