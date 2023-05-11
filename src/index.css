@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+
+* {
+  outline: 1px red solid;
+}
+
+body {
+  @apply bg-neutral-100 font-raleway
+}
+
+#root {
+  @apply min-h-screen container mx-auto flex justify-center
+}
+
+.container-box {
+  @apply my-6 w-full flex flex-col items-center
+}
+
+#search {
+  @apply rounded-full px-2 max-h-8 h-8 w-1/2 mb-6 leading-8 text-gray-700 font-semibold text-sm tracking-wide
+}
+
+.note-container {
+  @apply h-full w-full
+}

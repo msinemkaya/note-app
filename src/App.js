@@ -4,7 +4,7 @@ import SearchBar from './components/SearchBar';
 
 function App() {
   return (
-    <div className='container'>
+    <div className='container-box'>
       <SearchBar />
       <NoteList />
     </div>
