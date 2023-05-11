@@ -3,8 +3,16 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
 
-* {
+/* * {
   outline: 1px red solid;
+} */
+
+::-webkit-scrollbar {
+  @apply w-[4px]
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-gray-400/50
 }
 
 body {
@@ -23,6 +31,26 @@ body {
   @apply rounded-full px-2 max-h-8 h-8 w-1/2 mb-6 leading-8 text-gray-700 font-semibold text-sm tracking-wide
 }
 
+.scroll-zone {
+  @apply overflow-auto invisible hover:visible transition-all h-full min-w-max w-full
+}
+
 .note-container {
-  @apply h-full w-full
+  @apply h-full min-w-max w-full flex flex-wrap gap-8 mx-auto justify-center items-center md:content-center visible py-8
+}
+
+.note {
+  @apply w-2/5 h-2/5 min-h-[10rem] min-w-[6rem] md:w-1/4 rounded-3xl transition-all duration-500
+}
+
+.note {
+  box-shadow: inset 10px 10px 20px #d5d5d5,
+            inset -10px -10px 20px #ffffff;
+       
+}
+
+.note:hover {
+  box-shadow: 10px 10px 32px #cecece,
+             -10px -10px 32px #ffffff;
+  scale: 1.1;
 }
