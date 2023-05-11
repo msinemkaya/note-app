@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
-
-/* * {
+/* 
+* {
   outline: 1px red solid;
 } */
 
@@ -32,15 +32,15 @@ body {
 }
 
 .scroll-zone {
-  @apply overflow-auto invisible hover:visible transition-all h-full min-w-max w-full
+  @apply overflow-auto invisible hover:visible transition-all h-full mx-auto min-w-max w-full max-w-full
 }
 
 .note-container {
-  @apply h-full min-w-max w-full flex flex-wrap gap-8 mx-auto justify-center items-center md:content-center visible py-8
+  @apply h-full min-w-max w-full flex flex-wrap gap-8 mx-auto justify-center visible py-8
 }
 
 .note {
-  @apply w-2/5 h-2/5 min-h-[10rem] min-w-[6rem] md:w-1/4 rounded-3xl transition-all duration-500
+  @apply w-2/5 h-2/5 min-h-[10rem] md:w-1/4 rounded-3xl transition-all duration-500 p-4 font-medium text-gray-700 relative
 }
 
 .note {
@@ -53,4 +53,24 @@ body {
   box-shadow: 10px 10px 32px #cecece,
              -10px -10px 32px #ffffff;
   scale: 1.1;
+}
+
+.button-container {
+  @apply absolute bottom-4 right-4 flex flex-col-reverse gap-1
+}
+
+.button {
+  @apply rounded-full p-1 text-white/90 text-lg
+}
+
+.click {
+  @apply bg-orange-400 hover:bg-orange-500 !visible
+}
+
+.delete {
+  @apply invisible bg-red-500 hover:bg-red-600
+}
+
+.edit {
+  @apply invisible bg-pink-400 hover:bg-pink-500
 }

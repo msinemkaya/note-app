@@ -5,10 +5,6 @@ export default function NoteList(){
     <div className='scroll-zone'>
       <div className='note-container'>
         <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
       </div>
     </div>
   );
