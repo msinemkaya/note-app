@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
-/* 
+
 * {
   outline: 1px red solid;
-} */
+}
 
 ::-webkit-scrollbar {
   @apply w-[4px]
@@ -32,11 +32,11 @@ body {
 }
 
 .scroll-zone {
-  @apply overflow-auto invisible hover:visible transition-all h-full mx-auto min-w-max w-full max-w-full
+  @apply overflow-auto invisible hover:visible transition-all h-full container min-w-fit w-full max-w-full
 }
 
 .note-container {
-  @apply h-full min-w-max w-full flex flex-wrap gap-8 mx-auto justify-center visible py-8
+  @apply h-full w-full flex flex-wrap gap-8 mx-auto justify-center visible py-8
 }
 
 .note {
@@ -80,7 +80,11 @@ body {
 }
 
 .add-note {
-  @apply w-2/5 h-2/5 min-h-[10rem] md:w-1/4 rounded-3xl border-4 border-dashed hover:scale-110 transition-all flex items-center justify-center
+  @apply w-2/5 h-2/5 min-h-[10rem] md:w-1/4 rounded-3xl border-4 border-dashed hover:scale-110 transition-all flex flex-col items-center justify-center
+}
+
+.newnote {
+  @apply rounded-3xl outline-none w-full h-full text-start resize-none p-2 bg-transparent
 }
 
 .add-button {
