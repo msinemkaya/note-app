@@ -12,11 +12,20 @@ export function Provider({ children }) {
     ])
   }
 
+  function editNote(id, text){
+    const index = notes.findIndex((note) => note.id === id)
+    if (index !== -1) {
+      notes[index]['text'] = text
+    }
+    setNotes([...notes])
+  }
+
   console.log(notes)
   
   const values ={
     notes,
     addNote,
+    editNote
   }
 
   return (

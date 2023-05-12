@@ -2,7 +2,7 @@ import { useRef, useState } from 'react';
 import { AiOutlineDelete } from 'react-icons/ai'
 import { FiEdit2 } from 'react-icons/fi'
 
-export default function Button({type, vis}){
+export default function Button({type, vis, handle}){
 
   const icons = {
     delete: <AiOutlineDelete />,
@@ -11,7 +11,7 @@ export default function Button({type, vis}){
  
   return(
     <>
-      <button className={`button ${type}`} style={{ visibility: vis ? 'visible' : 'hidden' }}>{icons[type]}</button>
+      <button className={`button ${type}`} style={{ visibility: vis ? 'visible' : 'hidden' }} onClick={handle}>{icons[type]}</button>
     </>
   );
 }

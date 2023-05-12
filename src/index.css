@@ -79,6 +79,10 @@ body {
   @apply invisible bg-pink-400 hover:bg-pink-500
 }
 
+.tick {
+  @apply bg-gray-500 hover:bg-gray-600
+}
+
 .add-note {
   @apply w-2/5 h-2/5 min-h-[10rem] md:w-1/4 rounded-3xl border-4 border-dashed hover:scale-110 transition-all flex flex-col items-center justify-center
 }
