@@ -17,7 +17,7 @@ export default function Note({note}){
 
   const handleType = (type, id = 0) => {
     if(type === 'edit') {
-      setEdit(true)
+      setEdit(!edit)
     }else {
       deleteNote(id)
     }

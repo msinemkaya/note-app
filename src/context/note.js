@@ -8,6 +8,7 @@ const initialNotes = localStorage.getItem('notes')
 
 export function Provider({ children }) {
   const [notes, setNotes] = useState(initialNotes)
+  const [searchedNotes , setSearchedNotes] = useState([])
 
   useEffect(() => {
     localStorage.setItem('notes', JSON.stringify(notes));
@@ -33,13 +34,18 @@ export function Provider({ children }) {
     setNotes(newNotes)
   }
 
-  console.log(notes)
+  function searchNote(text){
+    const searched = notes.filter((note) => note.text.toLowerCase().includes(text))
+    setSearchedNotes(searched)
+  }
   
   const values ={
     notes,
     addNote,
     editNote,
-    deleteNote
+    deleteNote,
+    searchNote,
+    searchedNotes
   }
 
   return (

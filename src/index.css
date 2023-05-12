@@ -27,8 +27,16 @@ body {
   @apply my-6 w-full flex flex-col items-center
 }
 
+.search-form {
+  @apply w-1/2 flex space-x-5 max-h-8 h-8
+}
+
+.search {
+  @apply bg-gray-300
+}
+
 #search {
-  @apply rounded-full px-2 max-h-8 h-8 w-1/2 mb-6 leading-8 text-gray-700 font-semibold text-sm tracking-wide
+  @apply rounded-full px-2 max-h-8 h-8 w-full mb-6 leading-8 text-gray-700 font-semibold text-sm tracking-wide
 }
 
 .scroll-zone {
