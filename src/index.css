@@ -11,6 +11,10 @@
   @apply w-[4px]
 }
 
+::-webkit-scrollbar-corner {
+  @apply bg-transparent
+}
+
 ::-webkit-scrollbar-thumb {
   @apply rounded-full bg-gray-400/50
 }
@@ -49,6 +53,10 @@ body {
 
 .note {
   @apply w-2/5 h-2/5 min-h-[10rem] md:w-1/4 rounded-3xl transition-all duration-500 p-4 font-medium text-gray-700 relative
+}
+
+.note-text {
+  @apply text-ellipsis overflow-hidden break-words line-clamp-4 hover:overflow-scroll
 }
 
 .note {

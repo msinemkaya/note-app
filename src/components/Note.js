@@ -42,7 +42,7 @@ export default function Note({note}){
         </form>
       )}
       {!edit && (
-        <p>{note.text}</p>
+        <p className='note-text'>{note.text}</p>
       )}
       <div className='button-container'>
         <button onClick={handleClick} className='button click'><TbClick /></button>
