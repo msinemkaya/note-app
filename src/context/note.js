@@ -20,12 +20,18 @@ export function Provider({ children }) {
     setNotes([...notes])
   }
 
+  function deleteNote(id){
+    const newNotes = notes.filter(note => note.id !== id)
+    setNotes(newNotes)
+  }
+
   console.log(notes)
   
   const values ={
     notes,
     addNote,
-    editNote
+    editNote,
+    deleteNote
   }
 
   return (

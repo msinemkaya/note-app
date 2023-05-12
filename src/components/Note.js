@@ -9,17 +9,17 @@ export default function Note({note}){
   const [vis, setVis] = useState(false)
   const [edit, setEdit] = useState(false)
   const [text, setText] = useState(note.text)
-  const { editNote } = useNoteContext()
+  const { editNote, deleteNote } = useNoteContext()
 
   const handleClick = () => {
     setVis(!vis)
   }
 
-  const handleType = (type) => {
+  const handleType = (type, id = 0) => {
     if(type === 'edit') {
       setEdit(true)
     }else {
-      
+      deleteNote(id)
     }
   }
   
@@ -46,7 +46,7 @@ export default function Note({note}){
       )}
       <div className='button-container'>
         <button onClick={handleClick} className='button click'><TbClick /></button>
-        <Button type={'delete'} vis={vis} />
+        <Button type={'delete'} vis={vis} handle={(e) => handleType('delete' , note.id)}/>
         <Button type={'edit'} vis={vis} handle={(e) => handleType('edit')}/>
       </div>
       <span className='date'>{note.date}</span>
