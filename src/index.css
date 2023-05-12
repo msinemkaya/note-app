@@ -3,9 +3,9 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
 
-* {
+/* * {
   outline: 1px red solid;
-}
+} */
 
 ::-webkit-scrollbar {
   @apply w-[4px]

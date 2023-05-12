@@ -12,7 +12,10 @@ export function Provider({ children }) {
     ])
   }
 
+  console.log(notes)
+  
   const values ={
+    notes,
     addNote,
   }
 
