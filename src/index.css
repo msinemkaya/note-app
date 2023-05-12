@@ -96,7 +96,11 @@ body {
 }
 
 .tick {
-  @apply bg-gray-500 hover:bg-gray-600
+  @apply bg-gray-500 hover:bg-gray-600 
+}
+
+.edit-form {
+  @apply h-24
 }
 
 .add-note {
@@ -104,7 +108,7 @@ body {
 }
 
 .newnote {
-  @apply rounded-3xl outline-none w-full h-full text-start resize-none p-2 bg-transparent
+  @apply rounded-tl-3xl rounded-tr-3xl outline-none w-full h-full text-start resize-none p-2 bg-transparent
 }
 
 .add-button {

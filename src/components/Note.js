@@ -36,7 +36,7 @@ export default function Note({note}){
   return(
     <div className='note'>
       {edit && (
-        <form onSubmit={(e) => handleSubmit(e, note.id , text)}>
+        <form onSubmit={(e) => handleSubmit(e, note.id , text)} className='edit-form'>
           <textarea placeholder='your note.. ' className='newnote' value={text} onChange={handleChange}/>
           <button className='button tick'><TiTick/></button>
         </form>
